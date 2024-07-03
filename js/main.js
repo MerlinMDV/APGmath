@@ -19,8 +19,9 @@ function mathMain() {
 
   percent = (xp / goalxp);
 
-  document.getElementById("output").value = `You have gained a total of ~${xp} xp.\nYou are ${Math.round((percent*100), 2)}% of the way to level ${goal}.`
+  let output = `You have gained a total of ~${xp} xp.\nYou are ${(percent*100).toFixed(2)}% of the way to level ${goal}.`
 
-  console.log(`You have gained a total of ~${xp} xp.`);
-  console.log(`You are ${Math.round((percent*100), 2)}% of the way to level ${goal}.`);
+  document.getElementById("output").value = output
+
+  console.log(output);
 }
